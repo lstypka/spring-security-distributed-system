@@ -1,4 +1,4 @@
-package pl.lstypka.springBootSecurityPoc.service;
+package pl.lstypka.springBootSecurityPoc.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.AuthenticationException;

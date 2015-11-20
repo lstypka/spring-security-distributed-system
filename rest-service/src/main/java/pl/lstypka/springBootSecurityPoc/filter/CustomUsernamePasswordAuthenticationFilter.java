@@ -3,7 +3,7 @@ package pl.lstypka.springBootSecurityPoc.filter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pl.lstypka.springBootSecurityPoc.dto.BoUserAuthDto;
+import pl.lstypka.springBootSecurityPoc.dto.LoginRequestDto;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,7 +51,7 @@ public class CustomUsernamePasswordAuthenticationFilter extends UsernamePassword
 
 				// json transformation
 				ObjectMapper mapper = new ObjectMapper();
-				BoUserAuthDto loginRequest = mapper.readValue(sb.toString(), BoUserAuthDto.class);
+				LoginRequestDto loginRequest = mapper.readValue(sb.toString(), LoginRequestDto.class);
 
 				// persist user and password as request attribute
 				request.setAttribute(USERNAME, loginRequest.getUser());

@@ -1,11 +1,11 @@
 package pl.lstypka.springBootSecurityPoc.dto;
 
-public class BoUserAuthDto {
+public class LoginRequestDto {
 
     private String user;
     private String password;
 
-    public BoUserAuthDto() {
+    public LoginRequestDto() {
     }
 
     public String getUser() {

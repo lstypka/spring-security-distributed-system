@@ -1,7 +1,9 @@
-package pl.lstypka.springBootSecurityPoc.service;
+package pl.lstypka.springBootSecurityPoc.handler;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +17,8 @@ import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+import pl.lstypka.springBootSecurityPoc.bo.SecurityUser;
+import pl.lstypka.springBootSecurityPoc.dto.UserDto;
 
 @Component
 public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
@@ -25,16 +29,13 @@ public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccess
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException {
 		SavedRequest savedRequest = requestCache.getRequest(request, response);
 
-		Object principal =  authentication.getPrincipal();
+		SecurityUser userSecurity =  (SecurityUser) authentication.getPrincipal();
 		ObjectMapper mapper = new ObjectMapper();
 		PrintWriter writer = response.getWriter();
-		System.out.println("PRINCIPLE : " + principal.toString());
-	/*	BoUserDto boUserDto = new BoUserDto();
-		boUserDto.setEmail(userDetails.getEmail());
-		boUserDto.setId(userDetails.getUserId());
-		boUserDto.setName(userDetails.getUsername());
-*/
-		mapper.writeValue(writer, principal);
+
+		UserDto userDto = new UserDto(userSecurity.getUserNo(), userSecurity.getUsername(), userSecurity.getAuthorities().stream().map(x -> x.getAuthority()).collect(Collectors.toList()));
+
+		mapper.writeValue(writer, userDto);
 		writer.flush();
 
 		if (savedRequest == null) {

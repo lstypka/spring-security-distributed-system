@@ -1,4 +1,4 @@
-package pl.lstypka.springBootSecurityPoc.service;
+package pl.lstypka.springBootSecurityPoc.handler;
 
 import java.io.IOException;
 import java.io.PrintWriter;
