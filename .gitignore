@@ -1,7 +1,28 @@
 
 # /
-*.idea
-*.project
-*.settings
-*atlassian-ide-plugin.xml
-*.iml
+/.idea
+/.project
+/.settings
+/.iml
+
+/target
+# /client1/
+/client1/*.iml
+/client1/.classpath
+/client1/.project
+/client1/.settings
+/client1/target
+
+# /client2/
+/client2/*.iml
+/client2/.classpath
+/client2/.project
+/client2/.settings
+/client2/target
+
+# /security-config/
+/security-config/*.iml
+/security-config/.classpath
+/security-config/.project
+/security-config/.settings
+/security-config/target
