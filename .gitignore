@@ -3,7 +3,7 @@
 /.idea
 /.project
 /.settings
-/.iml
+/*.iml
 
 /target
 # /client1/
