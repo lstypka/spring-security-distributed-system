@@ -1,7 +1,7 @@
 package pl.lstypka.springSecurityDistributedSystem.config.exception;
 
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 public class UserNotFoundException extends RuntimeException {
 

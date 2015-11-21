@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 public class SecurityUser implements UserDetails {
 

@@ -1,7 +1,7 @@
 package pl.lstypka.springSecurityDistributedSystem.config.service;
 
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;

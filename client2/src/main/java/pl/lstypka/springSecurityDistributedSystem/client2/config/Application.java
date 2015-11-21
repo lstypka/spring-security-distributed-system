@@ -1,6 +1,6 @@
 package pl.lstypka.springSecurityDistributedSystem.client2.config;
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

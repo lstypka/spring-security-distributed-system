@@ -7,7 +7,7 @@ import pl.lstypka.springSecurityDistributedSystem.config.dto.UserDto;
 import pl.lstypka.springSecurityDistributedSystem.config.service.AuthService;
 
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 @RestController
 public class UserController {

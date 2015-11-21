@@ -1,7 +1,7 @@
 package pl.lstypka.springSecurityDistributedSystem.config.handler;
 
 /**
- * Created by Łukasz on 2015-11-20.
+ * Created by Lukasz Stypka on 2015-11-20.
  */
 
 import java.io.IOException;
