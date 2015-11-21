@@ -1,5 +1,9 @@
 package pl.lstypka.springSecurityDistributedSystem.config.handler;
 
+/**
+ * Created by Łukasz on 2015-11-20.
+ */
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;

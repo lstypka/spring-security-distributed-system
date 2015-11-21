@@ -1,5 +1,9 @@
 package pl.lstypka.springSecurityDistributedSystem.config.filter;
 
+/**
+ * Created by Łukasz on 2015-11-20.
+ */
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;

@@ -6,12 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
-import pl.lstypka.springSecurityDistributedSystem.config.config.HttpSessionConfig;
-import pl.lstypka.springSecurityDistributedSystem.config.config.WebSecurityConfig;
+import pl.lstypka.springSecurityDistributedSystem.config.config.SecurityConfig;
 
 @SpringBootApplication
-@ComponentScan({"pl.lstypka.springSecurityDistributedSystem.client2", "pl.lstypka.springSecurityDistributedSystem.config"})
-@Import({HttpSessionConfig.class, WebSecurityConfig.class})
+@ComponentScan({"pl.lstypka.springSecurityDistributedSystem.client2"})
+@Import({SecurityConfig.class})
 public class Application {
 
     public static void main(String[] args) throws Throwable {

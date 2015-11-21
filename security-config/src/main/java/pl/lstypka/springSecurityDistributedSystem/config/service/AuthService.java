@@ -1,5 +1,8 @@
 package pl.lstypka.springSecurityDistributedSystem.config.service;
 
+/**
+ * Created by Łukasz on 2015-11-20.
+ */
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,7 +27,7 @@ public class AuthService implements UserDetailsService {
 		}
 		if("user".equals(username)) {
 			authorities.add(()-> "ROLE_USER");
-			return new SecurityUser(1L, username, "s3cr3t", authorities);
+			return new SecurityUser(2L, username, "s3cr3t", authorities);
 		}
 
 		throw new UserNotFoundException("User %s not found".format(username));
