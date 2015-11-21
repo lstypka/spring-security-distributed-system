@@ -69,6 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new HeaderHttpSessionStrategy();
     }
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint()).and().addFilterBefore(authenticationFilter(), CustomUsernamePasswordAuthenticationFilter.class).csrf().disable()

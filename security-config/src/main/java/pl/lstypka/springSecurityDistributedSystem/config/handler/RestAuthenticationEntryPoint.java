@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 
 import pl.lstypka.springSecurityDistributedSystem.config.dto.FaultDto;
 
-@Component("restAuthenticationEntryPoint")
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
 	@Override

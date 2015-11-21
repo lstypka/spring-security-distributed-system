@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@Component
 public class AuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
 	@Override
@@ -27,5 +26,4 @@ public class AuthenticationFailureHandler extends SimpleUrlAuthenticationFailure
 		FaultDto faultDto = new FaultDto("SPRING-SECURITY-1", exception.getMessage());
 		writer.println(mapper.writeValueAsString(faultDto));
 	}
-
 }

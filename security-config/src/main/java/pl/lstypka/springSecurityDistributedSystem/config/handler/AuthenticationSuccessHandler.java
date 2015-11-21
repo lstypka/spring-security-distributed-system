@@ -23,15 +23,10 @@ import org.springframework.util.StringUtils;
 import pl.lstypka.springSecurityDistributedSystem.config.bo.SecurityUser;
 import pl.lstypka.springSecurityDistributedSystem.config.dto.UserDto;
 
-@Component
 public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-
-	private RequestCache requestCache = new HttpSessionRequestCache();
 
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException {
-		SavedRequest savedRequest = requestCache.getRequest(request, response);
-
 		SecurityUser userSecurity =  (SecurityUser) authentication.getPrincipal();
 		ObjectMapper mapper = new ObjectMapper();
 		PrintWriter writer = response.getWriter();
@@ -40,23 +35,5 @@ public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccess
 
 		mapper.writeValue(writer, userDto);
 		writer.flush();
-
-		if (savedRequest == null) {
-			clearAuthenticationAttributes(request);
-			return;
-		}
-		String targetUrlParam = getTargetUrlParameter();
-		if (isAlwaysUseDefaultTargetUrl() || (targetUrlParam != null && StringUtils.hasText(request.getParameter(targetUrlParam)))) {
-			requestCache.removeRequest(request, response);
-			clearAuthenticationAttributes(request);
-			return;
-		}
-
-		clearAuthenticationAttributes(request);
-
-	}
-
-	public void setRequestCache(RequestCache requestCache) {
-		this.requestCache = requestCache;
 	}
 }
