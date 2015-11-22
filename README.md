@@ -9,6 +9,7 @@ Redis database is required. If you use Windows, you will find appropriate instal
 
 
 __Build and Run__
+
 Build:
 `mvn clean install`
 
@@ -19,9 +20,11 @@ You can run main method from your IDE or execute the following command in your t
 
 
 Authentication:
+
 `curl -X POST http://localhost:8092/authenticate -H "Content-Type: application/json" -d "{\"user\" : \"admin\", \"password\" : \"s3cr3t\"}" -v`
 
 Expected output:
+
 ```
 < HTTP/1.1 200 OK
 * Server Apache-Coyote/1.1 is not blacklisted
