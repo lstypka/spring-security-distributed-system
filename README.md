@@ -38,6 +38,9 @@ Expected output:
 ```
 
 Once we have a session token, we can try invoke :
+
 `curl http://localhost:8091/time -H "x-auth-token: 0e401c0f-d365-4ceb-813b-e3e18cccee8f"` for endpoint of client1
+
 `curl http://localhost:8092/user -H "x-auth-token: 0e401c0f-d365-4ceb-813b-e3e18cccee8f"` for endpoint of client2
+
 
