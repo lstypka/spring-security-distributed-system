@@ -15,7 +15,9 @@ Build:
 
 Run:
 You can run main method from your IDE or execute the following command in your terminal: 
+
 `mvn spring-boot:run -Dserver.port=8091` for client1
+
 `mvn spring-boot:run -Dserver.port=8092` for client2
 
 
