@@ -2,6 +2,7 @@
 
 This is a simple springBoot project consists of two RESTful web-services (client1 and client2) and spring security configuration (security-config) which allows to authenticate by a JSON object. By using session token (stored in REDIS database) instead of sessionId in cookie, it is possible to share authentication among two web-services. Therefore, it is pretty easy to authenticate by client1 and then invoke client2 endpoint.
 
+A full description you can find here: [http://jsolve.github.io/java/spring-security-distributed-system/](http://jsolve.github.io/java/spring-security-distributed-system/)
 
 __REDIS__
 
